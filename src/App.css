@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(max-width:768px) {
+  .FirstSection,.SecondSection,.ThirdSection {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .ThirdSection img {
+    display: none;
   }
+  .NavBar ul {
+      display: none !important;
+  }
+  .NavBar >div span {
+    font-size: 25px!important;
+  }
+  .FirstSection >div {
+    max-width: 100%;
+  }
+  .SecondSection >div {
+    max-width: 100%;
+  }
+  .SecondSection table {
+    max-width: 100%;
+  }
+  .ThirdSection >div div p {
+    max-width: 100%!important;
+  }
+}
+.winner {
+  font-weight: bold;
+}
+table {
+  max-width:100%;
 }
